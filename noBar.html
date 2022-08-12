@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 
+    UNIK LIMBU
+    zcqsuli@ucl.ac.uk or uniklimbu81@gmail.com
+
+    HTML code for the GUI of QuARC
+    With reference to an existing GUI created by Fern Pannell
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>GUI</title> -->
+    <!-- Accessing D3 library from CDN 
+    <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    <!-- Accesing D3 library by downloading the source code version 7.6.1 (11/07/22)-->
+    <script src="d3.min.js"></script>
+    <!-- linking the CSS for the display -->
+    <link rel="stylesheet" href="GUI.css" />
+    <!-- Load papaparse.js (parsing library for data) -->
+	  <script src="papaparse.min.js"></script> 
+</head>
+
+ <body>
+    <div class = "flex-parent jc-center" >
+    <!-- START BUTTONS -->
+    <button id="parse-start" class="func-btn">Start</button>
+    <!-- STOP BUTTON (REFRESHES THE PAGE) -->
+    <button id="parse-stop" class="func-btn" onClick="window.location.reload();">Stop</button>
+    <!-- RANGE BUTTON (VARY THE Y-AXIS) -->
+    <button id="range" class="func-btn">Range</button>
+
+    <!-- GET RID OF THE PD BUTTONS-->
+    <!-- PHOTODIODE BUTTONS -->
+    <button id="pd-16" class="PD-btn">16</button>
+    <button id="pd-32" class="PD-btn">32</button>
+    <button id="pd-48" class="PD-btn">48</button>
+    <button id="pd-64" class="PD-btn">64</button>
+    <button id="pd-80" class="PD-btn">80</button> 
+
+    <!-- TEXT ENTRY BOX FOR PHOTODIODE BUTTONS -->
+    <!-- <button id="PDbtn" class="func-btn">Select number of photodiode</button> -->
+
+    <!-- PLOT TYPE BUTTONS: PHOTODIODE -->
+    <a href="#"><button class="type-btn" id="btn-photodiodes-clicked">Photodiodes</button></a>
+    <!-- PLOT TYPE BUTTONS: CURVES -->
+    <a href="GUI-CUR.html"><button class="type-btn">Curves</button></a>
+    <!-- PLOT TYPE BUTTONS: ERROR BARS -->
+    <a href="GUI-EB.html"><button class="type-btn">Error Bars</button></a>
+
+  </div>
+
+  <svg class="chart"></svg> 
+  <!-- <svg width="600" height="500"></svg> -->
+  
+    <!-- CANVAS FOR THE GRAPH -->
+    <canvas id="myChart" width="50" height="20%"></canvas>
+    <!-- All the javascript for the index page -->
+    <script src="noBar.js"></script>
+
+ </body>
+
+</html>
